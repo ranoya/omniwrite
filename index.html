@@ -28,6 +28,17 @@
       ) {
         startcommand = $_GET["startcommand"];
       }
+
+      let link =
+        "https://docs.google.com/document/d/1e4PqivLZLkaB2VPthey_XTQAf0XNZ4GtG56eQF50c7A/edit";
+
+      if (
+        typeof $_GET["link"] != "undefined" &&
+        $_GET["link"] != null &&
+        $_GET["link"] != ""
+      ) {
+        link = $_GET["link"];
+      }
     </script>
 
     <style>
@@ -70,7 +81,7 @@
         "https://poepesquisa.vercel.app/csv/?title=PESQUISA&json=https://docs.google.com/spreadsheets/d/1ywz7XciIATPOn5cF-L51XELMxFaLmgyBZneETNCycG4/edit#gid=1601649623&custommenu=https://docs.google.com/spreadsheets/d/1OAFTp3hglr3zj-cQzXJUqV-QROtaWtSYnCuGjwZIM5Y/edit#gid=143264650&textos=https://docs.google.com/spreadsheets/d/1d9eKw82lnM5GvVkBUe8wLcHSxpmDm5B6dUqWRbazOik/edit#gid=1493544759&plugins=https://docs.google.com/spreadsheets/d/1ywz7XciIATPOn5cF-L51XELMxFaLmgyBZneETNCycG4/edit#gid=215348125&files=https://docs.google.com/spreadsheets/d/1ywz7XciIATPOn5cF-L51XELMxFaLmgyBZneETNCycG4/edit#gid=262818016&run=true&nofocus=true&startcommand=" +
         startcommand;
 
-      document.getElementById("word").src = $_GET["link"];
+      document.getElementById("word").src = link;
     </script>
   </body>
 </html>
